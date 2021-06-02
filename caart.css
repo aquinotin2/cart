@@ -1,0 +1,202 @@
+@import "compass/css3";
+
+/* Global settings */
+color-border: #D46A6A;
+color-label: #D46A6A;
+font-default: 'Calibri', sans-serif;
+font-bold: 'HelveticaNeue-Medium', 'Calibri';
+
+.flex-container {
+  display: flex;
+}
+
+
+
+.product-image{  text-indent: 1px;  width: 5%;}
+.product-price { float: left; text-indent: 3px; width: 10%; }
+.product-quantity { float: left; text-indent: 6px; width: 15%; }
+.product-removal { float: left; text-indent: 9px; width: 25%; }
+.product-line-price { float: left; width: 45%; text-align: right;}
+
+
+
+/* This is used as the traditional .clearfix class */
+.group:before,
+.group:after {
+    content: '';
+    display: table;
+} 
+.group:after {
+    clear: both;
+}
+.group {
+    zoom: 1;
+}
+
+
+/* Apply clearfix in a few places */
+.shopping-cart,  .product, .totals-item {
+  extend .group;
+}
+
+
+/* peso sign */
+.product .product-price:before, .product .product-line-price:before, .product-price:before {
+  content: 'P';
+}
+
+.product .product-price:before, .product .product-line-price:before, .product-line-price:before {
+  content: 'P';
+}
+
+.product .product-price:before, .product .product-line-price:before, .cart-subtotal:before {
+  content: 'P';
+}
+
+.product .product-price:before, .product .product-line-price:before, .cart-tax:before {
+  content: 'P';
+}
+
+.product .product-price:before, .product .product-line-price:before, .cart-shipping:before {
+  content: 'P';
+}
+
+.product .product-price:before, .product .product-line-price:before, .cart-total:before {
+  content: 'P';
+}
+
+
+/* Body/Header stuff */
+body {
+  padding: 0px 50px 50px 50px;
+  font-family: font-default;
+  font-weight: 100;
+}
+
+h1 {
+  font-weight: 100;
+}
+
+label {
+  color: #EA5F5F;
+}
+
+.shopping-cart {
+  margin-top: -45px;
+}
+
+
+/* Column headers */
+.column-labels {
+  height: 120px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid
+  }
+  
+  .product-image{
+      text-indent: 1px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+
+  .product-title{
+      text-indent: 140px;
+      margin-top: -110px;
+  } 
+
+  .product-price{
+      text-indent: 330px;
+      margin-top: 5px;
+  }
+
+   .product-removal {
+      text-indent: 210px;
+      margin-top: 5px;
+}
+
+ .product-line-price {
+      width: 70px;
+      text-indent: 340px;
+      margin-top: 5px;
+}
+
+   .product-line-price{
+      text-indent: -50px;
+      margin-top: 4px;
+  }
+
+/* Product entries */
+.product {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $color-border;
+  }
+
+  .product-image {
+    text-align: center;
+      width: 10px;
+      height: 120px;
+  }
+  
+  
+  .product-quantity {
+      width: 40px;
+  }
+  
+  .remove-product {
+    border: 0;
+    padding: 4px 8px;
+    background-color: #c66;
+    color: #fff;
+    font-family: $font-bold;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+  
+  .remove-product:hover {
+    background-color: #a44;
+  }
+}
+
+
+/* Total section */
+    .label {
+      float: right;
+      clear: both;
+      width: 79%; 
+    }
+  
+  .totals-item-total {
+    font-family: font-bold;
+    text-indent: 330px;
+  }
+
+.totals-item{text-indent: 250px; margin-top: 50px;}
+.totals-item1{text-indent: 250px; margin-top: 5px;}
+.totals-item2{text-indent: 250px; margin-top: 5px;}
+.totals-item3{text-indent: 250px; margin-top: 5px;}
+
+
+  #cart-subtotal {text-indent: 530px; margin-top: -12px;}
+  #cart-tax {text-indent: 530px; margin-top: -12px;}
+  #cart-shipping {text-indent: 530px; margin-top: -12px;}
+  #cart-total{text-indent: 530px; margin-top: -12px;}
+
+
+.checkout {
+  float: left;
+  border: 0;
+  padding: 6px 12px;
+  background-color: #DBD5DF;
+  color: #0E0015;
+  font-size: 16px;
+  font-family: calibri;
+  border-radius: 3px;
+  height: 40px;
+  margin-top: -70px;
+}
+
+.checkout:hover {
+  background-color: #D46A6A;
+}
